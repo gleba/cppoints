@@ -1,0 +1,15 @@
+#logArea {
+    -fx-background-color: #333333;
+    -fx-font: 12pt "Consolas";
+    -fx-text-fill: #CCCCcc;
+}
+
+.tool-bar{
+    -fx-min-height: 400;
+    -fx-max-height: 400;
+
+    /*-fx-padding: 10;*/
+    -fx-background-size: 600 100;
+    /*-fx-pref-height: 40;*/
+    /*-fx-background-color: #FFFF09;*/
+}

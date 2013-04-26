@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="120.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml" fx:controller="cpapp.view.ClearAlertController">
+  <children>
+    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="500.0" text="Эта комманда сотрёт все записи устройства!" textAlignment="CENTER" underline="false" VBox.vgrow="ALWAYS">
+      <effect>
+        <Reflection fraction="0.5277777777777777" topOffset="-43.0" topOpacity="0.34920634920634924" />
+      </effect>
+      <font>
+        <Font size="20.0" />
+      </font>
+      <VBox.margin>
+        <Insets fx:id="x2" />
+      </VBox.margin>
+    </Label>
+    <HBox alignment="CENTER" padding="$x2" prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+      <children>
+        <Button mnemonicParsing="false" text="Стереть">
+          <font>
+            <Font size="18.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button font="$x1" fx:id="cb" onAction="#onClose" mnemonicParsing="false" text="Отмена" />
+      </children>
+    </HBox>
+  </children>
+</VBox>
