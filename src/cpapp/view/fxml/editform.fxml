@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import java.net.URL?>
+<VBox maxWidth="-1.0" minHeight="400.0" minWidth="600.0" prefHeight="407.0" prefWidth="639.0" xmlns:fx="http://javafx.com/fxml" fx:controller="cpapp.view.EditFormController">
+  <children>
+    <HBox prefHeight="40.0" prefWidth="200.0">
+      <children>
+        <ToolBar minHeight="40.0" prefHeight="-1.0" HBox.hgrow="SOMETIMES">
+          <items>
+            <Button mnemonicParsing="false" onAction="#addCPoint" text="+" />
+            <Button mnemonicParsing="false" onAction="#remCPoint" text="-" />
+            <HBox alignment="CENTER" maxHeight="-1.0" prefHeight="-1.0" prefWidth="-1.0" />
+          </items>
+          <HBox.margin>
+            <Insets fx:id="x1" />
+          </HBox.margin>
+        </ToolBar>
+        <ToolBar minHeight="40.0" minWidth="-1.0" prefHeight="-1.0" HBox.hgrow="ALWAYS" HBox.margin="$x1">
+          <items>
+            <Label contentDisplay="LEFT" prefHeight="22.999900000002526" text="имя:">
+              <font>
+                <Font size="16.0" />
+              </font>
+            </Label>
+            <TextField fx:id="fileName" prefWidth="170.0" />
+            <Button mnemonicParsing="false" onAction="#update" text="update" />
+          </items>
+        </ToolBar>
+        <ToolBar maxWidth="230.0" minHeight="40.0" minWidth="-1.0" prefHeight="40.0" prefWidth="220.0" HBox.hgrow="ALWAYS" HBox.margin="$x1">
+          <items>
+            <Button mnemonicParsing="false" onAction="#addFile" text="+" />
+            <Button mnemonicParsing="false" onAction="#remFile" text="-" />
+            <Button disable="true" mnemonicParsing="false" text="экспорт" />
+            <Button disable="true" mnemonicParsing="false" text="импорт" />
+          </items>
+        </ToolBar>
+      </children>
+    </HBox>
+    <SplitPane dividerPositions="0.5227629513343799" focusTraversable="true" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+      <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <fx:include source="editTable.fxml" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+          </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <children>
+            <TableView fx:id="tableFiles" prefHeight="-1.0" prefWidth="-1.0"  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn minWidth="100.0" prefWidth="180.0" text="имя файла" fx:id="cFileName" />
+                <TableColumn maxWidth="200.0" minWidth="10.0" prefWidth="150.0" text="создан" fx:id="cCreateTime" />
+              </columns>
+            </TableView>
+          </children>
+        </AnchorPane>
+      </items>
+    </SplitPane>
+  </children>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</VBox>

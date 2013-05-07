@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<HBox xmlns:fx="http://javafx.com/fxml" fx:controller="cpapp.view.TextAreaLogController">
+  <children>
+    <TextArea fx:id="textArea" editable="false" HBox.hgrow="ALWAYS">
+      <HBox.margin>
+        <Insets />
+      </HBox.margin>
+    </TextArea>
+  </children>
+</HBox>

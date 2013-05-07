@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="cpapp.view.EditTableController">
+    <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="cellName" prefWidth="175.0" text="название чекпойнта" />
+            <TableColumn fx:id="cellId" prefWidth="100.0" text="id точки" />
+        </columns>
+        <VBox.margin>
+            <Insets />
+        </VBox.margin>
+    </TableView>
+</VBox>
